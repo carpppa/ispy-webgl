@@ -1,0 +1,79 @@
+@import "compass";
+
+// TODO: save fonts
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,400);
+@import url(http://fonts.googleapis.com/css?family=Homemade+Apple);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200);
+
+body {
+  background-color: black;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+$navbar-color: rgba(40, 40, 40, 0.9);
+$treeview-color: $navbar-color;
+$font-color-light: rgba(227, 225, 224, 1);
+$treeview-selected-color: lighten($treeview-color, 90%);
+$light-color: darken($font-color-light, 30%);
+$middle-color: darken($font-color-light, 60%);
+$dark-color: rgba(60, 60, 60, 0.6);
+
+
+$navbar-height: 60px;
+$sidebar-right-width: 12%;
+$sidebar-left-width: 12%;
+
+$btn-nav-diam: ($navbar-height * 0.6);
+$btn-nav-margin: ($navbar-height * 0.2);
+
+$treeview-group-height: $btn-nav-diam;
+$treeview-padding: ($navbar-height * 0.1);
+
+$instance-row-height: 24px;
+$group-row-height: 30px;
+
+%clickable-style {
+  font-weight: 100;
+  color: $font-color-light;
+}
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  &:hover {
+    color: lighten($middle-color, 20%);
+  }
+}
+
+span.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

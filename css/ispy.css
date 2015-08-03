@@ -1,326 +1,741 @@
-body.black {
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,400);
+@import url(http://fonts.googleapis.com/css?family=Homemade+Apple);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,400);
+@import url(http://fonts.googleapis.com/css?family=Homemade+Apple);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,400);
+@import url(http://fonts.googleapis.com/css?family=Homemade+Apple);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200);
+/* line 8, conf.scss */
+body {
   background-color: black;
+  margin: 0;
 }
 
-body.white {
-  background-color: white;
+/* line 13, conf.scss */
+html, body {
+  height: 100%;
 }
 
-#stats {
-  position: absolute;
-  top:0;
-  left: 0;
+/* line 17, conf.scss */
+::-webkit-scrollbar {
+  display: none;
 }
 
-#fps-slider {
-  width: 200px;
+/* line 43, conf.scss */
+.catalogue ul .div-instance-name, .div-group-name {
+  font-weight: 100;
+  color: #e3e1e0;
 }
 
-#axes  {
-  border: none;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1001;
-  background-color: transparent;
+/* line 48, conf.scss */
+* {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.info {
-  visibility: collapse;
-}
-
-#event-info {
-  position: absolute;
-  top:0;
-  left:0;
-  z-index: 1002;
-  padding-top: 10px;
-  padding-left: 10px;
-  display: block;
-}
-
-#event-info.black {
-  color: white;
-}
-
-#event-info.white {
-  color: black;
-}
-
-#event-text {
-  padding-left: 10px;
-}
-
-#event-text.stereo-mode {
-  width: 50%;
-  font-size: 6pt;
-  opacity: 0.5;
-}
-
-#cms-logo > img {
-  max-width: 60px;
-  max-height: 60px;
-}
-
-.bordered {
-  border: thin solid gray;
-}
-
-#titlebar {
-  height: 25px;
-}
-
-#titlebar.black {
-  color: white;
-  background-color: black;
-}
-
-#titlebar.white {
-  color: black;
-  background-color: white;
-}
-
-#toolbar {
-  float: left;
-}
-
-#toolbar.black {
-  color: white;
-  background-color: black;
-}
-
-#toolbar.white {
-  color: black;
-  background-color: white;
-}
-
-#toolbar img {
-  width: 20px;
-  height: 20px;
-}
-
-#toolbar .button-toolbar {
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-.btn {
-  background-color: #dfdfdf;
-}
-
-.btn.active {
-  background-color: #bbb;
-}
-
-#treeview {
-  height: 500px;
-  overflow: scroll;
-}
-
-#treeview.black .table-hover tr:hover {
-  background-color: #777;
-}
-
-#treeview.white .table-hover tr:hover {
-  background-color: #dfdfdf;
-}
-
-#treeview.black {
-  color: white;
-  background-color: black;
-}
-
-#treeview.white {
-  color: black;
-  background-color: white;
-}
-
-#treeview .group {
-  border-top: 1px solid black;
-  background-color: #202020;
-  color: white;
-}
-
-#treeview .group.black {
-  border-top: 1px solid black;
-  background-color: #202020;
-  color: white;
-}
-
-#treeview .group.white {
-  border-top: 1px solid white;
-  background-color: #cccccc;
-  color: black;
-}
-
-#treeview .collection {
-  border-top: 0px;
-  color: white;
-}
-
-#treeview td.collection.black {
-  color: white;
-}
-
-#treeview td.collection.white {
-  color: black;
-}
-
-#treeview .info {
-  color: red;
-}
-
-#treeview .expand {
-  color: grey;
-  padding-right: 5px;
-}
-
-#display {
-  height: 500px;
-  overflow: hidden;
+/* line 52, conf.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+  margin: 0;
   padding: 0;
 }
 
-#display.black {
-  color: white;
-  background-color: black;
+/* line 58, conf.scss */
+button:focus {
+  outline: none;
 }
 
-#display.white {
+/* line 62, conf.scss */
+a {
+  text-decoration: none;
   color: black;
-  background-color: white;
+}
+/* line 65, conf.scss */
+a:hover {
+  color: #827975;
 }
 
-#tableview {
-  height: 140px;
-  overflow: scroll;
-}
-
-#tableview.black {
-  color: white;
-  background-color: black;
-}
-
-#tableview.white {
-  color: black;
-  background-color: white;
-}
-
-#tableview.black .table-hover tr:hover {
-  background-color: #777;
-}
-
-#tableview.white .table-hover tr:hover {
-  background-color: #dfdfdf;
-}
-
-#table-data-eventObject.black.table-hover>tbody>tr:hover {
-  background-color: #777;
-}
-
-#table-data-eventObject.white.table-hover>tbody>tr:hover {
-  background-color: #dfdfdf;
-}
-
-.modal-dialog button.close {
-  color: red;
-  text-shadow: none;
-  opacity: 1.0;
-}
-
-.modal-content.black {
-  color: white;
-  background-color: black;
-}
-
-.modal-content.white {
-  color: black;
-  background-color: white;
-}
-
-.modal-content div {
+/* line 70, conf.scss */
+span.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   border: 0;
 }
 
-#loading .modal-content {
-  width: 50%;
-  text-align: center;
+/* line 8, conf.scss */
+body {
+  background-color: black;
+  margin: 0;
 }
 
-#browser-events td.black {
-  background-color: #303030;
+/* line 13, conf.scss */
+html, body {
+  height: 100%;
 }
 
-#browser-events td.white {
-  background-color: white;
+/* line 17, conf.scss */
+::-webkit-scrollbar {
+  display: none;
 }
 
-/*
-.modal-title.black {
-  background-color: #202020;
+/* line 43, conf.scss */
+.catalogue ul .div-instance-name, .div-group-name {
+  font-weight: 100;
+  color: #e3e1e0;
 }
 
-.modal-title.white {
-  background-color: #cccccc;
+/* line 48, conf.scss */
+* {
+  font-family: 'Josefin Sans', sans-serif;
 }
-*/
 
-#files .modal-body {
-  max-height: 300px;
+/* line 52, conf.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 58, conf.scss */
+button:focus {
+  outline: none;
+}
+
+/* line 62, conf.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* line 65, conf.scss */
+a:hover {
+  color: #827975;
+}
+
+/* line 70, conf.scss */
+span.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 5, tree-view.scss */
+#tree-view {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  bottom: 0;
+  width: 12%;
+  background-color: rgba(40, 40, 40, 0.9);
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
-#selected-event {
-  border: 1px solid #ccc;
+/* line 16, tree-view.scss */
+.catalogue {
+  position: relative;
+  padding: 0;
+}
+/* line 20, tree-view.scss */
+.catalogue ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 25, tree-view.scss */
+.catalogue ul .div-instance-name {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 80%;
+  padding-left: 10%;
+}
+/* line 33, tree-view.scss */
+.catalogue ul .visibility-toggle {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
   width: 100%;
-  text-align: left;
-  padding-left: 20px;
+  margin: 0;
+}
+/* line 38, tree-view.scss */
+.catalogue ul .visibility-toggle div {
+  cursor: crosshair;
+  margin: 0 6px;
+}
+/* line 42, tree-view.scss */
+.catalogue ul .visibility-toggle p {
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+}
+/* line 47, tree-view.scss */
+.catalogue ul .visibility-toggle:hover {
+  color: #9a9390;
+}
+/* line 50, tree-view.scss */
+.catalogue ul .visibility-toggle:hover div i {
+  color: #e3e1e0;
+}
+/* line 57, tree-view.scss */
+.catalogue ul .display-data {
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 6px;
+  cursor: pointer;
+  color: #9a9390;
+}
+/* line 64, tree-view.scss */
+.catalogue ul .display-data:hover {
+  color: #e3e1e0;
+}
+/* line 67, tree-view.scss */
+.catalogue ul .display-data:active {
+  color: rgba(60, 60, 60, 0.6);
+}
+/* line 70, tree-view.scss */
+.catalogue ul .display-data.displaying {
+  color: #e3e1e0;
+}
+/* line 72, tree-view.scss */
+.catalogue ul .display-data.displaying:active {
+  color: rgba(60, 60, 60, 0.6);
 }
 
-#event-buttons {
-  padding-top: 10px;
+/* line 81, tree-view.scss */
+.div-group-name {
+  width: 100%;
+  margin: 0;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  /*
+  &.all-visible {
+    background-color: $treeview-selected-color;
+  }
+  */
+}
+/* line 88, tree-view.scss */
+.div-group-name .row-visibility-toggle {
+  width: 80%;
+}
+/* line 91, tree-view.scss */
+.div-group-name .row-visibility-toggle div {
+  margin: 0 6px;
+}
+/* line 93, tree-view.scss */
+.div-group-name .row-visibility-toggle div i {
+  color: #9a9390;
+}
+/* line 97, tree-view.scss */
+.div-group-name .row-visibility-toggle p {
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+  font-family: 'Exo 2', sans-serif;
+  text-transform: uppercase;
+}
+/* line 105, tree-view.scss */
+.div-group-name .row-visibility-toggle:hover p {
+  color: #9a9390;
+}
+/* line 109, tree-view.scss */
+.div-group-name .row-visibility-toggle:hover div i {
+  color: #e3e1e0;
+}
+/* line 116, tree-view.scss */
+.div-group-name .display-info {
+  padding: 0 5% 0 2%;
+  color: #9a9390;
+}
+/* line 120, tree-view.scss */
+.div-group-name .display-info:hover {
+  color: #e3e1e0;
+}
+/* line 123, tree-view.scss */
+.div-group-name .display-info:active {
+  color: rgba(60, 60, 60, 0.6);
+}
+/* line 128, tree-view.scss */
+.div-group-name .all-visibility-toggle {
+  padding: 0 5%;
+  color: #9a9390;
+}
+/* line 132, tree-view.scss */
+.div-group-name .all-visibility-toggle:hover {
+  color: #e3e1e0;
 }
 
-#browser-table.white {
-  background-color: white;
-  color: black;
+/* line 144, tree-view.scss */
+.div-group-name .row-visibility-toggle, .div-group-name .display-info, .div-group-name .all-visibility-toggle {
+  margin: 0;
 }
 
-#browser-table.black {
+/* line 149, tree-view.scss */
+.catalogue ul .div-instance-name, .div-group-name, .div-group-name .row-visibility-toggle, .div-group-name .display-info, .div-group-name .all-visibility-toggle, .catalogue ul .visibility-toggle, .catalogue ul .display-data {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 154, tree-view.scss */
+.div-group-name .row-visibility-toggle, .div-group-name .display-info, .div-group-name .all-visibility-toggle {
+  height: 30px;
+  cursor: pointer;
+}
+
+/* line 160, tree-view.scss */
+.catalogue ul .visibility-toggle, .catalogue ul .display-data {
+  height: 24px;
+}
+
+/* line 166, tree-view.scss */
+.table-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 30%;
+  overflow: scroll;
+  background-color: rgba(40, 40, 40, 0.9);
+}
+
+/* line 175, tree-view.scss */
+#collection-table {
+  width: 98%;
+  border-collapse: collapse;
+  color: #e3e1e0;
+  margin: 1%;
+}
+/* line 182, tree-view.scss */
+#collection-table thead tr th {
+  border-bottom: 1px solid #a6a09d;
+  padding: 0 0 5px 0;
+}
+/* line 185, tree-view.scss */
+#collection-table thead tr th:hover {
+  color: #9a9390;
+  cursor: pointer;
+}
+/* line 191, tree-view.scss */
+#collection-table tbody {
+  overflow: scroll;
+  border-bottom-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+/* line 198, tree-view.scss */
+#collection-table tbody tr:hover {
+  background-color: #4c4745;
+}
+/* line 201, tree-view.scss */
+#collection-table tbody tr td {
+  text-align: right;
+  padding: 3px 2%;
+  border: 1px dotted #4c4745;
+}
+
+/* line 8, conf.scss */
+body {
   background-color: black;
-  color: white;
+  margin: 0;
 }
 
-#browser-table th.black {
-  background-color: #202020;
-  color: white;
+/* line 13, conf.scss */
+html, body {
+  height: 100%;
 }
 
-#browser-table th.white {
-  background-color: #cccccc;
+/* line 17, conf.scss */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 43, conf.scss */
+.catalogue ul .div-instance-name, .div-group-name {
+  font-weight: 100;
+  color: #e3e1e0;
+}
+
+/* line 48, conf.scss */
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* line 52, conf.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 58, conf.scss */
+button:focus {
+  outline: none;
+}
+
+/* line 62, conf.scss */
+a {
+  text-decoration: none;
   color: black;
 }
-
-#browser-table.black td {
-  background-color: #303030;
+/* line 65, conf.scss */
+a:hover {
+  color: #827975;
 }
 
-#browser-table.white td {
-  background-color: white;
-}
-
-#browser-table.black td > a {
-  color: white;
-}
-
-#browser-table.white td > a {
-  color: black;
-}
-
-#browser-files td {
+/* line 70, conf.scss */
+span.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   border: 0;
 }
 
-#browser-events td {
-  border: 0;
+/* line 5, modals.scss */
+.modal {
+  position: fixed;
+  z-index: 8888;
+  background-color: rgba(10, 10, 10, 0.6);
+  height: 100%;
+  width: 100%;
+}
+/* line 12, modals.scss */
+.modal .modal-dialog {
+  position: fixed;
+  z-index: 9000;
+  width: 30%;
+  height: 60%;
+  top: 20%;
+  left: 35%;
+}
+/* line 20, modals.scss */
+.modal .modal-dialog .modal-content {
+  background-color: #4c4745;
+  color: #e3e1e0;
+  max-height: 100%;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 27, modals.scss */
+.modal .modal-dialog .modal-content .modal-header {
+  width: 100%;
+  padding: 4% 0;
+  background-color: #9a9390;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 33, modals.scss */
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-size: 1.2em;
+  width: 100%;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+/* line 40, modals.scss */
+.modal .modal-dialog .modal-content .modal-header .modal-ingress {
+  padding: 1%;
+  text-align: justify;
+}
+/* line 44, modals.scss */
+.modal .modal-dialog .modal-content .modal-header .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2px;
+  padding: 0;
+  height: 16px;
+  width: 16px;
+  color: #9a9390;
+  border: none;
+  background-color: #4c4745;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* line 58, modals.scss */
+.modal .modal-dialog .modal-content .modal-header .close:hover {
+  color: #4c4745;
+  background-color: #9a9390;
+  border: solid 1px #4c4745;
+}
+/* line 64, modals.scss */
+.modal .modal-dialog .modal-content .modal-header .close:active {
+  color: #e3e1e0;
+  border-color: #e3e1e0;
+}
+/* line 71, modals.scss */
+.modal .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  overflow-y: scroll;
+  padding: 2%;
+}
+/* line 76, modals.scss */
+.modal .modal-dialog .modal-content .modal-body .instance-name {
+  padding: 2%;
+}
+/* line 83, modals.scss */
+.modal .modal-dialog .modal-content .modal-footer {
+  width: 100%;
+  padding: 2% 0;
+  background-color: #9a9390;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 90, modals.scss */
+.modal .modal-dialog .modal-content .modal-footer button {
+  width: 20%;
+  height: 36px;
+  margin: 0 40%;
+  border: 1px solid #e3e1e0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: 'Andale Mono', 'Monaco', sans-serif;
+  font-size: 1em;
+  color: #e3e1e0;
+  cursor: pointer;
+}
+/* line 101, modals.scss */
+.modal .modal-dialog .modal-content .modal-footer button:hover {
+  border: 1px dashed #e3e1e0;
+}
+/* line 104, modals.scss */
+.modal .modal-dialog .modal-content .modal-footer button:active {
+  color: #4c4745;
+  border: 1px solid #4c4745;
+}
+
+/* line 116, modals.scss */
+.modal .modal-dialog .modal-content, .modal .modal-dialog .modal-content .modal-footer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+/* line 5, ispy.scss */
+nav {
+  background-color: rgba(40, 40, 40, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 900;
+}
+/* line 12, ispy.scss */
+nav .nav-right {
+  right: 0;
+}
+/* line 16, ispy.scss */
+nav .nav-left {
+  left: 0;
+}
+/* line 20, ispy.scss */
+nav div {
+  color: #e3e1e0;
+  height: 100%;
+}
+/* line 25, ispy.scss */
+nav #ispy-edu, nav #opendata, nav #ispy-webgl {
+  text-align: center;
+  height: 50%;
+}
+/* line 29, ispy.scss */
+nav #ispy-edu:hover, nav #opendata:hover, nav #ispy-webgl:hover {
+  color: #9a9390;
+  cursor: pointer;
+}
+/* line 35, ispy.scss */
+nav #ispy-edu {
+  position: relative;
+  top: 25%;
+}
+/* line 39, ispy.scss */
+nav #ispy-edu h1 {
+  font-family: 'Homemade Apple', cursive;
+}
+/* line 44, ispy.scss */
+nav #opendata {
+  top: 0;
+}
+/* line 49, ispy.scss */
+nav #ispy-webgl {
+  top: 100%;
+}
+/* line 54, ispy.scss */
+nav #controls {
+  position: relative;
+  left: 12%;
+  right: 12%;
+  width: 76%;
+  z-index: 100;
+}
+/* line 61, ispy.scss */
+nav #controls .btn-row {
+  padding: 0 5%;
+}
+/* line 65, ispy.scss */
+nav #controls .btn-row .btn-nav {
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border: 1px solid #9a9390;
+  color: #e3e1e0;
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+}
+/* line 74, ispy.scss */
+nav #controls .btn-row .btn-nav:hover {
+  background-color: transparent;
+  border: 1px dashed #9a9390;
+}
+/* line 78, ispy.scss */
+nav #controls .btn-row .btn-nav:active {
+  background-color: rgba(53, 53, 53, 0.9);
+}
+/* line 83, ispy.scss */
+nav #controls .btn-row .active {
+  background-color: rgba(60, 60, 60, 0.6);
+}
+/* line 87, ispy.scss */
+nav #controls .btn-row .disabled {
+  background-color: #4c4745;
+  border: none;
+}
+/* line 90, ispy.scss */
+nav #controls .btn-row .disabled:hover {
+  background-color: #4c4745;
+  border: none;
+  cursor: default;
+}
+/* line 98, ispy.scss */
+nav #controls .btn-group {
+  height: 36px;
+  display: inline-block;
+  position: relative;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+}
+/* line 104, ispy.scss */
+nav #controls .btn-group .btn:first-child {
+  -moz-border-radius-topleft: 500px;
+  -webkit-border-top-left-radius: 500px;
+  border-top-left-radius: 500px;
+  -moz-border-radius-bottomleft: 500px;
+  -webkit-border-bottom-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+/* line 107, ispy.scss */
+nav #controls .btn-group .btn:last-child {
+  -moz-border-radius-topright: 500px;
+  -webkit-border-top-right-radius: 500px;
+  border-top-right-radius: 500px;
+  -moz-border-radius-bottomright: 500px;
+  -webkit-border-bottom-right-radius: 500px;
+  border-bottom-right-radius: 500px;
+}
+
+/* line 115, ispy.scss */
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+/* line 120, ispy.scss */
+.btn-default {
+  height: 36px;
+  color: #e3e1e0;
+  border: 1px solid #e3e1e0;
+  font-family: 'Andale Mono', 'Monaco', sans-serif;
+  font-size: 1em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 127, ispy.scss */
+.btn-default:hover {
+  cursor: pointer;
+  border-style: dashed;
+}
+/* line 131, ispy.scss */
+.btn-default:active {
+  color: rgba(60, 60, 60, 0.6);
+  border: 1px solid rgba(60, 60, 60, 0.6);
+}
+
+/* line 137, ispy.scss */
+nav #ispy-edu, nav #opendata, nav #ispy-webgl, nav #controls .btn-row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+/* line 143, ispy.scss */
+nav .nav-left, nav .nav-right {
+  position: absolute;
+}
+
+/* line 147, ispy.scss */
+nav .nav-left {
+  width: 12%;
+}
+
+/* line 152, ispy.scss */
+nav .nav-right {
+  width: 12%;
+}
+
+/* line 157, ispy.scss */
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 165, ispy.scss */
+#axes {
+  position: fixed;
+  right: 30px;
+  bottom: 0;
+}
+
+/* line 171, ispy.scss */
+#stats {
+  position: fixed;
+  right: 30px;
+  top: 80px;
 }

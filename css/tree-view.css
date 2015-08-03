@@ -1,0 +1,317 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,400);
+@import url(http://fonts.googleapis.com/css?family=Homemade+Apple);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200);
+/* line 8, conf.scss */
+body {
+  background-color: black;
+  margin: 0;
+}
+
+/* line 13, conf.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 17, conf.scss */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 43, conf.scss */
+.catalogue ul .div-instance-name, .div-group-name {
+  font-weight: 100;
+  color: #e3e1e0;
+}
+
+/* line 48, conf.scss */
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* line 52, conf.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 58, conf.scss */
+button:focus {
+  outline: none;
+}
+
+/* line 3, tree-view.scss */
+#tree-view {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  height: 100%;
+  width: 12%;
+  background-color: rgba(40, 40, 40, 0.9);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 14, tree-view.scss */
+.catalogue {
+  position: relative;
+  padding: 0;
+}
+/* line 18, tree-view.scss */
+.catalogue ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 23, tree-view.scss */
+.catalogue ul .div-instance-name {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 80%;
+  padding-left: 10%;
+}
+/* line 31, tree-view.scss */
+.catalogue ul .visibility-toggle {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0;
+}
+/* line 36, tree-view.scss */
+.catalogue ul .visibility-toggle div {
+  cursor: crosshair;
+  margin: 0 6px;
+}
+/* line 40, tree-view.scss */
+.catalogue ul .visibility-toggle p {
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+}
+/* line 45, tree-view.scss */
+.catalogue ul .visibility-toggle:hover {
+  color: #9a9390;
+}
+/* line 48, tree-view.scss */
+.catalogue ul .visibility-toggle:hover div i {
+  color: #e3e1e0;
+}
+/* line 55, tree-view.scss */
+.catalogue ul .display-data {
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 6px;
+  cursor: pointer;
+  color: #9a9390;
+}
+/* line 62, tree-view.scss */
+.catalogue ul .display-data:hover {
+  color: #e3e1e0;
+}
+/* line 66, tree-view.scss */
+.catalogue ul .display-data.displaying {
+  color: #e3e1e0;
+}
+
+/* line 74, tree-view.scss */
+.div-group-name {
+  width: 100%;
+  margin: 0;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  /*
+  &.all-visible {
+    background-color: $treeview-selected-color;
+  }
+  */
+}
+/* line 81, tree-view.scss */
+.div-group-name .row-visibility-toggle {
+  width: 80%;
+}
+/* line 84, tree-view.scss */
+.div-group-name .row-visibility-toggle div {
+  margin: 0 6px;
+}
+/* line 86, tree-view.scss */
+.div-group-name .row-visibility-toggle div i {
+  color: #9a9390;
+}
+/* line 90, tree-view.scss */
+.div-group-name .row-visibility-toggle p {
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+  font-family: 'Exo 2', sans-serif;
+  text-transform: uppercase;
+}
+/* line 98, tree-view.scss */
+.div-group-name .row-visibility-toggle:hover p {
+  color: #9a9390;
+}
+/* line 102, tree-view.scss */
+.div-group-name .row-visibility-toggle:hover div i {
+  color: #e3e1e0;
+}
+/* line 109, tree-view.scss */
+.div-group-name .display-info {
+  padding: 0 5%;
+  color: #9a9390;
+}
+/* line 113, tree-view.scss */
+.div-group-name .display-info:hover {
+  color: #e3e1e0;
+}
+/* line 118, tree-view.scss */
+.div-group-name .all-visibility-toggle {
+  color: #9a9390;
+}
+/* line 121, tree-view.scss */
+.div-group-name .all-visibility-toggle:hover {
+  color: #e3e1e0;
+}
+
+/* line 133, tree-view.scss */
+.div-group-name .row-visibility-toggle, .div-group-name .display-info, .div-group-name .all-visibility-toggle {
+  margin: 0;
+}
+
+/* line 138, tree-view.scss */
+.catalogue ul .div-instance-name, .div-group-name, .div-group-name .row-visibility-toggle, .div-group-name .display-info, .div-group-name .all-visibility-toggle, .catalogue ul .visibility-toggle, .catalogue ul .display-data {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 143, tree-view.scss */
+.div-group-name .row-visibility-toggle, .div-group-name .display-info, .div-group-name .all-visibility-toggle {
+  height: 30px;
+  cursor: pointer;
+}
+
+/* line 149, tree-view.scss */
+.catalogue ul .visibility-toggle, .catalogue ul .display-data {
+  height: 24px;
+}
+
+/* line 156, tree-view.scss */
+.info-modal-back {
+  position: fixed;
+  z-index: 9998;
+  background-color: rgba(10, 10, 10, 0.6);
+  height: 100%;
+  width: 100%;
+}
+/* line 163, tree-view.scss */
+.info-modal-back .info-modal {
+  position: fixed;
+  z-index: 9999;
+  width: 30%;
+  max-height: 60%;
+  top: 20%;
+  left: 35%;
+  overflow-y: scroll;
+  background-color: #4c4745;
+  color: #e3e1e0;
+  padding: 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 176, tree-view.scss */
+.info-modal-back .info-modal .group-name {
+  padding: 3%;
+  width: 94%;
+  margin: 0;
+  background-color: #9a9390;
+  font-weight: 600;
+  text-align: center;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 185, tree-view.scss */
+.info-modal-back .info-modal .group-description {
+  padding: 3%;
+  text-align: justify;
+}
+/* line 189, tree-view.scss */
+.info-modal-back .info-modal .instance-name {
+  padding: 2%;
+}
+/* line 192, tree-view.scss */
+.info-modal-back .info-modal .instance-description {
+  padding-left: 5%;
+}
+/* line 196, tree-view.scss */
+.info-modal-back .info-modal button.exit {
+  width: 20%;
+  height: 36px;
+  margin: 4% 40%;
+  border: 1px solid #9a9390;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: 'Andale Mono', 'Monaco', sans-serif;
+  font-size: 1em;
+  color: #e3e1e0;
+  cursor: pointer;
+}
+/* line 207, tree-view.scss */
+.info-modal-back .info-modal button.exit:hover {
+  border: 1px dashed #9a9390;
+}
+/* line 210, tree-view.scss */
+.info-modal-back .info-modal button.exit:active {
+  background-color: rgba(53, 53, 53, 0.9);
+}
+
+/* line 217, tree-view.scss */
+.table-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 30%;
+  overflow: scroll;
+  background-color: rgba(40, 40, 40, 0.9);
+}
+
+/* line 226, tree-view.scss */
+#collection-table {
+  width: 98%;
+  border-collapse: collapse;
+  color: #e3e1e0;
+  margin: 1%;
+}
+/* line 233, tree-view.scss */
+#collection-table thead tr th {
+  border-bottom: 1px solid #a6a09d;
+  padding: 0 0 5px 0;
+}
+/* line 236, tree-view.scss */
+#collection-table thead tr th:hover {
+  color: #9a9390;
+  cursor: pointer;
+}
+/* line 242, tree-view.scss */
+#collection-table tbody {
+  overflow: scroll;
+  border-bottom-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+/* line 249, tree-view.scss */
+#collection-table tbody tr:hover {
+  background-color: #4c4745;
+}
+/* line 252, tree-view.scss */
+#collection-table tbody tr td {
+  text-align: right;
+  padding: 3px 2%;
+  border: 1px dotted #4c4745;
+}

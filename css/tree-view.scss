@@ -1,0 +1,209 @@
+
+// TODO: delete import on production
+@import "conf";
+
+#tree-view {
+  position: fixed;
+  left: 0;
+  top: $navbar-height;
+  bottom: 0;
+  width: $sidebar-left-width;
+  background-color: $treeview-color;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.catalogue {
+  position: relative;
+  padding: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .div-instance-name {
+      @extend %flex-content-center;
+      @include justify-content(space-between);
+      @extend %clickable-style;
+      width: 80%;
+      padding-left: 10%;
+    }
+
+    .visibility-toggle {
+      @extend %instance-row-tool-style;
+      @include justify-content(flex-start);
+      width: 100%;
+      margin: 0;
+      div {
+        cursor: crosshair;
+        margin: 0 $treeview-padding;
+      }
+      p {
+        cursor: pointer;
+        margin: 0;
+        width: 100%;
+      }
+      &:hover{
+        color: $light-color;
+        div {
+          i {
+            color: $font-color-light;
+          }
+        }
+      }
+    }
+
+    .display-data {
+      @extend %instance-row-tool-style;
+      @include justify-content(center);
+      padding: 0 $treeview-padding;
+      cursor: pointer;
+      color: $light-color;
+
+      &:hover{
+        color: $font-color-light;
+      }
+      &:active {
+        color: $dark-color;
+      }
+      &.displaying {
+        color: $font-color-light;
+        &:active {
+          color: $dark-color;
+        }
+      }
+    }
+
+  }
+}
+
+.div-group-name {
+  width: 100%;
+  margin: 0;
+  @extend %flex-content-center;
+  @include justify-content(space-between);
+  @extend %clickable-style;
+
+  .row-visibility-toggle {
+    width: 80%;
+    @extend %group-row-tool-style;
+    div {
+      margin: 0 $treeview-padding;
+      i {
+        color: $light-color;
+      }
+    }
+    p {
+      cursor: pointer;
+      margin: 0;
+      width: 100%;
+      font-family: 'Exo 2', sans-serif;
+      text-transform: uppercase;
+    }
+    &:hover{
+      p {
+        color: $light-color;
+      }
+      div {
+        i {
+          color: $font-color-light;
+        }
+      }
+    }
+  }
+
+  .display-info {
+    @extend %group-row-tool-style;
+    padding: 0 5% 0 2%;
+    color: $light-color;
+    &:hover {
+      color: $font-color-light;
+    }
+    &:active {
+      color: $dark-color;
+    }
+  }
+
+  .all-visibility-toggle {
+    @extend %group-row-tool-style;
+    padding: 0 5%;
+    color: $light-color;
+    &:hover {
+      color: $font-color-light;
+    }
+  }
+
+  /*
+  &.all-visible {
+    background-color: $treeview-selected-color;
+  }
+  */
+}
+
+%group-row-tool-style {
+  margin: 0;
+  @extend %group-row-style;
+}
+
+%flex-content-center {
+  @include display-flex(flex);
+  @include align-items(center);
+}
+
+%group-row-style {
+  height: $group-row-height;
+  cursor: pointer;
+  @extend %flex-content-center;
+}
+
+%instance-row-tool-style {
+  height: $instance-row-height;
+  @extend %flex-content-center;
+}
+
+
+.table-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 30%;
+  overflow: scroll;
+  background-color: $treeview-color;
+}
+
+#collection-table {
+  width: 98%;
+  border-collapse: collapse;
+  color: $font-color-light;
+  margin: 1%;
+
+  thead tr {
+    th {
+      border-bottom: 1px solid lighten($light-color, 5%);
+      padding: 0 0 5px 0;
+      &:hover{
+        color: $light-color;
+        cursor: pointer;
+      }
+    }
+  }
+  tbody {
+    overflow: scroll;
+    border-bottom-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+
+    tr {
+      &:hover{
+        background-color: $middle-color;
+      }
+      td {
+        text-align: right;
+        padding: 3px 2%;
+        border: 1px dotted $middle-color;
+      }
+    }
+  }
+
+}

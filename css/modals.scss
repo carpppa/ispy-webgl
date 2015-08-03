@@ -1,0 +1,120 @@
+
+// TODO: delete import on production
+@import "conf";
+
+.modal {
+  position: fixed;
+  z-index: 8888;
+  background-color: rgba(10,10,10,0.6);
+  height: 100%;
+  width: 100%;
+
+  .modal-dialog {
+    position: fixed;
+    z-index: 9000;
+    width: 30%;
+    height: 60%;
+    top: 20%;
+    left: 35%;
+
+    .modal-content{
+      background-color: $middle-color;
+      color: $font-color-light;
+      max-height: 100%;
+      @include border-radius(4px);
+      @extend %flex-vertical;
+
+      .modal-header {
+        width: 100%;
+        padding: 4% 0;
+        background-color: $light-color;
+        @include border-top-radius(4px);
+
+        .modal-title {
+          font-size: 1.2em;
+          width: 100%;
+          margin: 0;
+          font-weight: 600;
+          text-align: center;
+        }
+        .modal-ingress {
+          padding: 1%;
+          text-align: justify;
+        }
+        .close {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 2px;
+          padding: 0;
+          height: 16px;
+          width: 16px;
+          color: $light-color;
+          border: none;
+          background-color: $middle-color;
+          @include border-radius(20px);
+          cursor: pointer;
+
+          &:hover {
+            color: $middle-color;
+            background-color: $light-color;
+            border: solid 1px $middle-color;
+          }
+          
+          &:active {
+            color: $font-color-light;
+            border-color: $font-color-light;
+          }
+        }
+      }
+
+      .modal-body {
+        width: 100%;
+        overflow-y: scroll;
+        padding: 2%;
+
+        .instance-name {
+          padding: 2%;
+        }
+        .instance-description {
+        }
+      }
+
+      .modal-footer {
+        width: 100%;
+        padding: 2% 0;
+        background-color: $light-color;
+        @include border-bottom-radius(4px);
+        @extend %flex-vertical;
+
+        button {
+          width: 20%;
+          height: $btn-nav-diam;
+          margin: 0 40%;
+          border: 1px solid $font-color-light;
+          @include border-radius(5px);
+          background-color: transparent;
+          font-family: 'Andale Mono', 'Monaco', sans-serif;
+          font-size: 1em;
+          color: $font-color-light;
+          cursor: pointer;
+          &:hover {
+            border: 1px dashed $font-color-light;
+          }
+          &:active {
+            color: $middle-color;
+            border: 1px solid $middle-color;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+%flex-vertical {
+  @include display-flex(flex);
+  @include flex-direction(column);
+  @include justify-content(flex-start);
+}

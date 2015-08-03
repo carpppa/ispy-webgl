@@ -1,0 +1,34 @@
+
+<div id="files" role="dialog" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content bordered black">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title black">Open Event</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table black" width="100%" id="browser-table">
+          <tr>
+            <th class="browser-header bordered black" width="50%">Files</th>
+            <th class="browser-header bordered black">Events</th>
+          </tr>
+          <tr>
+            <td class="bordered">
+              <table class="table table-hover black" id="browser-files"></table>
+            </td>
+            <td class="bordered">
+              <table class="table table-hover black" id="browser-events"></table>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <div class="bordered" id="selected-event"> </div>
+        <div id="event-buttons">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="load-event" class="btn btn-default disabled" onclick="$('#files').modal('hide'); ispy.loadEvent();">Load</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

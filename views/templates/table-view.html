@@ -1,0 +1,27 @@
+<div class="table-container">
+  <table id="collection-table">
+    <thead>
+      <tr>
+        {{ var dataSort; }}
+        {{ _.each(data.types, function(type){ }}
+        {{   dataSort = type[1] === "double" ? "float" : type[1]; }}
+          <th data-sort="{{= dataSort }}">
+            <i class="i-no-sorted fa fa-sort"></i> {{= type[0] }}
+          </th>
+        {{ }); }}
+      </tr>
+    </thead>
+    <tbody>
+      {{ var id, objectID; }}
+      {{ _.each(data.collection, function(c, index){ }}
+      {{   id = data.key.concat(index); }}
+      {{   objectID = data.objectIDs !== undefined ? data.objectIDs[index] : undefined; }}
+        <tr id="{{= id }}" data-object-id="{{= objectID }}">
+          {{ _.each(c, function(value){ }}
+          <td>{{= value }}</td>
+          {{ }); }}
+        </tr>
+      {{ }); }}
+    </tbody>
+  </table>
+</div>

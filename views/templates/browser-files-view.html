@@ -1,0 +1,10 @@
+
+<tbody>
+  {{ for(var index in fileList){ }}
+  <tr>
+    <td>
+      <a id="browser-file-{{= index }}" class="file" onclick="Controls.showSelectedFile('{{= index }}')">{{= fileList[index] }}</a>
+    </td>
+  </tr>
+  {{ } }}
+</tbody>

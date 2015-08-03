@@ -1,0 +1,10 @@
+
+<tbody>
+  {{ for(var index in eventList){ }}
+  <tr>
+    <td>
+      <a id="browser-event-{{= index }}" class="event" onclick="Controls.showSelectedEvent('{{= index }}')">{{= eventList[index] }}</a>
+    </td>
+  </tr>
+  {{ } }}
+</tbody>
