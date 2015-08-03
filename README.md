@@ -19,10 +19,8 @@ Contributors: Luke Barnard, Mihael Hategan, Carita Logrén, Thomas McCauley, Pho
 Documentation
 -------------
 
-These are "guidelines" for developers, please follow this. The application is structured in modules,
+These are "guidelines" for developers, please follow this if contributing. The application is structured in modules,
  and apart from obvious reasons modularity is essential to be able to maintain two versions (ispy-webgl, ispy-edu) of it.
-
-> **Note!** All HTML and CSS should be kept fully compatible with bootstrap!
 
 ### js/
 
@@ -89,6 +87,8 @@ Contains stylesheets for application. lib/ folder contains fonts, and in ispy-we
 ispy-edu uses [SASS](http://sass-lang.com) and [Compass](http://compass-style.org) for styling. 
 SCSS-files need to be pre-compiled to CSS before including to the application. 
 
+> **Note!** All HTML and CSS should be kept fully compatible with bootstrap!
+
 ### views/
 
 Contains an independent Underscore template for all template-requiring views. Contains also views 
@@ -96,9 +96,9 @@ for controls and all modals. Templates are pre-compiled with Grunt into template
 as a script file in index.html. Templating is implemented on client side to reduce the traffic on server side. 
 
 Templates work with following (configured in Gruntfile.js in project directory):
-- escape: {{- }} 
-- evaluate: {{  }} **Note!** Wrap every line of code between these! Newlines are not allowed.
-- interpolate: {{= }}
+- escape: {{-  }} 
+- evaluate: {{   }} **Note!** Wrap every line of code between these! Newlines are not allowed.
+- interpolate: {{=  }}
 
 ### node_modules/
 
