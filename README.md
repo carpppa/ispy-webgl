@@ -37,54 +37,57 @@ Detector.js, Event.js), which are written in class style.
 In the following there are the JavaScript files in the same order as they appear in index.html.
 Module can use some other module's API functions, if it is "below" the firs module. Otherwise use event triggering. 
 
-##### ispy-config.js
+#### ispy-config.js
 
 Initialization of ispy variables. ispy variables should not be defined anywhere else! 
 
-##### Loader.js
+#### Loader.js
 
 For loading external data
 
-##### TreeView.js
+#### TreeView.js
 
 For creating and using tree-view. Uses Backbone, and is mainly self-maintaining. 
 
-##### TableView.js
+#### TableView.js
 
 For creating and using table-view. Uses Backbone, but lacks models and collections,
 and requires external data-input.
 
-##### Plotter.js
+#### Plotter.js
 
 For plotting THREE objects out of geometry and event data. All instances in ispy.event_description
 and ispy.detector_description should have a function ('fn') for plotting in Plotter.js.
 
-##### Scene.js
+#### Scene.js
 
 For maintaining and using THREE scene. Other modules should be able to touch the scene only
  via this module's API. 
 
-##### Detector.js
+#### Detector.js
 
 ATM only for creating Detector to the scene.
 
-##### Event.js
+#### Event.js
 
 For adding and managing events and event data. 
 
-##### Controls.js
+#### Controls.js
 
 All UI events are circulated through this module. This should be the only module (apart from TreeView.js
  and TableView.js) that has a proper access to the HTML (i.o.w. no other module should be able to make
  changes to the HTML; only find some _very_ consistent elements, and only, if it is _absolutely_ necessary).  
 
-##### app.js
+#### app.js
 
 For nudging the application to life!
 
 ### css/
 
 Contains stylesheets for application. lib/ folder contains fonts, and in ispy-webgl also Bootstrap.
+
+ispy-edu uses [SASS](http://sass-lang.com) and [Compass](http://compass-style.org) for styling. 
+SCSS-files need to be pre-compiled to CSS before including to the application. 
 
 ### views/
 
