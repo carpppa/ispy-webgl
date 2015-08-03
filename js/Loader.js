@@ -221,10 +221,10 @@ var Loader = (function(){
   };
 
   return {
-    selectWebFile: selectWebFile, // param: fileList, index
-    selectLocalFile: selectLocalFile, // fileList, index
-    loadEvent: loadEvent, // param: eventNamesList, index
-    importModel: importModel // param: inputId, return: loaded object
+    selectWebFile: selectWebFile, // param: fileList, index; return: array of names in the file
+    selectLocalFile: selectLocalFile, // param: fileList, index; return: array of names in the file
+    loadEvent: loadEvent, // param: eventNamesList, index; return: event (json)
+    importModel: importModel // param: inputId; return: loaded object
   };
 
 })();

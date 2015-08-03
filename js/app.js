@@ -13,26 +13,6 @@ $(function() {
   Controls.init(scene);
   new ispy.Detector(scene);
 
-  /*
-  var openFilesModal = $('#open-files');
-  $('#open-web-files').on('click', function(){
-    modal(openFilesModal, 'hide');
-    modal($('#files'), 'show');
-
-    // TODO: ispy.loadWebFiles();
-  });
-
-  $('#local-files').on({
-    'click': function(){
-      modal(openFilesModal, 'hide');
-    },
-    'change': function(){
-      // TODO: onchange="ispy.loadLocalFiles();"
-    }
-  });
-  */
-
-
 
   // HELPER FUNCTIONS
 
